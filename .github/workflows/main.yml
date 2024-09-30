@@ -1,0 +1,20 @@
+name: Hello World Workflow
+
+# Trigger this workflow on push to the main branch
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checkout the code
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Print "Hello, World!"
+    - name: Print Hello World
+      run: echo "Hello, World!"
